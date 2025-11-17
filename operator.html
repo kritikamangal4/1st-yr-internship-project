@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Operator Profile - International Tour Operator Info Portal</title>
+  <style>
+    body {font-family: Arial, sans-serif; background: #f5f7fa; margin:0; padding:0;}
+    header {background: linear-gradient(135deg,#4facfe,#00f2fe);color:white;padding:15px;text-align:center;}
+    nav {background:#222;padding:10px;text-align:center;}
+    nav a {color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
+    .profile-container {max-width:900px;margin:30px auto;padding:20px;background:white;border-radius:15px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+    .profile-container img {width:100%;height:300px;object-fit:cover;border-radius:15px;}
+    .profile-details {padding:20px;}
+    h2 {color:#333;}
+    ul {list-style: none;padding:0;}
+    ul li {background:#f0f8ff;margin:8px 0;padding:10px;border-radius:8px;}
+    .contact-box {background:#e6f7ff;padding:15px;border-radius:10px;margin-top:20px;}
+    footer {background:#222;color:white;text-align:center;padding:10px;margin-top:30px;}
+    button {padding:10px 15px;background:#4facfe;border:none;color:white;border-radius:8px;cursor:pointer;}
+    button:hover {background:#3a8fd8;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Operator Profile</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offers.html">Offers</a>
+    <a href="blog.html">Blog</a>
+    <a href="destination.html">Destinations</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="review.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="register.html">Register</a>
+    <a href="terms.html">Terms</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+
+
+  <div class="profile-container" id="profile"></div>
+
+  <footer>
+    <p>&copy; 2025 International Tour Operator Info Portal. All rights reserved.</p>
+  </footer>
+
+<script>
+  const operators = [
+    {
+      id: 1,
+      name: "Global Tours & Travels",
+      image: "https://picsum.photos/id/1011/900/300",
+      contact: "+91-9876543210",
+      email: "info@globaltours.com",
+      services: ["Europe Packages", "Visa Assistance", "Hotel Booking"],
+      location: "Delhi, India",
+      description: "We specialize in luxury Europe travel packages with 15+ years of experience."
+    },
+    {
+      id: 2,
+      name: "Skyline Holidays",
+      image: "https://picsum.photos/id/1015/900/300",
+      contact: "+91-9123456780",
+      email: "hello@skyline.com",
+      services: ["Domestic Tours", "Adventure Trips", "Cruises"],
+      location: "Mumbai, India",
+      description: "Your trusted partner for unforgettable holiday experiences across India."
+    }
+  ];
+
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get("id"));
+  const operator = operators.find(op => op.id === id);
+
+  if (operator) {
+    document.getElementById("profile").innerHTML = `
+      <img src="${operator.image}" alt="${operator.name}">
+      <div class="profile-details">
+        <h2>${operator.name}</h2>
+        <p><b>Location:</b> ${operator.location}</p>
+        <p><b>Description:</b> ${operator.description}</p>
+        <h3>Services Offered:</h3>
+        <ul>${operator.services.map(s => `<li>${s}</li>`).join("")}</ul>
+        <div class="contact-box">
+          <p><b>Contact:</b> ${operator.contact}</p>
+          <p><b>Email:</b> ${operator.email}</p>
+          <button onclick="alert('Enquiry Sent to ${operator.name}')">Send Enquiry</button>
+        </div>
+      </div>
+    `;
+  } else {
+    document.getElementById("profile").innerHTML = "<p>Operator not found!</p>";
+  }
+</script>
+</body>
+</html>

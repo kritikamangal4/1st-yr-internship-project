@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - International Tour Operator Info Portal</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;font-family:Arial, sans-serif;color:#eaf2ff;
+      background: linear-gradient(120deg, rgba(20,20,30,.75), rgba(30,30,50,.8)),
+                  url('https://images.unsplash.com/photo-1473286835901-04adb1afab03') no-repeat center/cover;}
+    header{background:rgba(0,0,0,.65);padding:22px;text-align:center;font-size:28px;font-weight:700}
+    nav{background:rgba(0,0,0,.7);padding:12px;text-align:center}
+    nav a{color:#eaf2ff;margin:0 14px;text-decoration:none;font-weight:700}
+    nav a:hover{color:#7fd3ff;text-shadow:0 0 8px #7fd3ff}
+    .wrap{max-width:1100px;margin:26px auto;padding:20px;background:rgba(255,255,255,.08);
+      border-radius:16px;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.45)}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:16px}
+    .card{background:rgba(255,255,255,.12);border-radius:12px;padding:16px}
+    .big{font-size:28px;font-weight:900}
+    .green{color:#7dffb3}.blue{color:#8fd0ff}.yellow{color:#ffe28a}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,.2)}
+    .actions button{margin-right:6px;padding:6px 10px;border:none;border-radius:8px;cursor:pointer}
+    .add{background:#1a88ff;color:#fff;font-weight:800;border-radius:10px;padding:9px 14px;margin-bottom:10px}
+    .add:hover{filter:brightness(1.07)}
+    footer{background:rgba(0,0,0,.78);padding:12px;text-align:center;margin-top:22px}
+  </style>
+</head>
+<body>
+  <header>🛠️ Admin Dashboard</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offers.html">Offers</a>
+    <a href="blog.html">Blog</a>
+    <a href="destination.html">Destinations</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="review.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="register.html">Register</a>
+    <a href="terms.html">Terms</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="card"><div class="big blue">128</div>Tour Operators</div>
+      <div class="card"><div class="big green">64</div>Active Offers</div>
+      <div class="card"><div class="big yellow">412</div>User Reviews</div>
+    </div>
+
+    <button class="add" onclick="alert('Open Add Operator (demo)')">+ Add Operator</button>
+
+    <div class="card">
+      <h3>Operators</h3>
+      <table>
+        <thead><tr><th>Name</th><th>Country</th><th>Service</th><th>Actions</th></tr></thead>
+        <tbody id="rows">
+          <tr><td>GlobeTrek</td><td>India</td><td>Adventure</td><td class="actions">
+            <button onclick="editRow(this)">Edit</button><button onclick="deleteRow(this)">Delete</button></td></tr>
+          <tr><td>SkyWay</td><td>USA</td><td>Luxury</td><td class="actions">
+            <button onclick="editRow(this)">Edit</button><button onclick="deleteRow(this)">Delete</button></td></tr>
+          <tr><td>EuroTour</td><td>France</td><td>Cultural</td><td class="actions">
+            <button onclick="editRow(this)">Edit</button><button onclick="deleteRow(this)">Delete</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>© 2025 International Tour Operator Info Portal</footer>
+
+  <script>
+    function editRow(btn){
+      const tr = btn.closest('tr'); const name = tr.children[0].textContent;
+      alert('Edit: '+name+' (demo)');
+    }
+    function deleteRow(btn){
+      if(confirm('Delete this record?')){
+        btn.closest('tr').remove();
+      }
+    }
+  </script>
+</body>
+</html>

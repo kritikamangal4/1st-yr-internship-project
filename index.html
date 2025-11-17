@@ -1,10 +1,176 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My website</title>
+  <meta charset="UTF-8">
+  <title>Home - International Tour Operator Info Portal</title>
+  <style>
+    * {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, rgba(0,114,255,0.7), rgba(0,198,255,0.7)), 
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    header {
+      background: rgba(0,0,0,0.6);
+      color:white;
+      text-align:center;
+      padding:20px;
+      font-size:28px;
+      font-weight: bold;
+      letter-spacing:1px;
+      backdrop-filter: blur(8px);
+    }
+    nav {
+      background: rgba(255,255,255,0.1);
+      padding:12px;
+      text-align:center;
+      backdrop-filter: blur(6px);
+    }
+    nav a {
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:bold;
+      position:relative;
+      transition:0.3s;
+    }
+    nav a::after {
+      content:"";
+      position:absolute;
+      width:0;
+      height:2px;
+      bottom:-4px;
+      left:0;
+      background:#00c6ff;
+      transition:0.3s;
+    }
+    nav a:hover::after {
+      width:100%;
+    }
+    .hero {
+      text-align:center;
+      padding:100px 20px 60px;
+    }
+    .hero h1 {
+      font-size:45px;
+      color:white;
+      text-shadow:0 4px 10px rgba(0,0,0,0.6);
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    .hero p {
+      margin-top:15px;
+      font-size:18px;
+      color:#f0f0f0;
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
+      animation: fadeInUp 1.4s ease-in-out;
+    }
+    .home {
+      max-width:950px;
+      margin:40px auto;
+      padding:25px;
+      background: rgba(255,255,255,0.12);
+      border-radius:15px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      animation: zoomIn 1s ease-in-out;
+    }
+    h2 {
+      color:#ffe066;
+      margin-bottom:12px;
+    }
+    ul {
+      margin:15px 0;
+      padding-left:20px;
+    }
+    ul li {
+      margin:8px 0;
+      font-size:16px;
+    }
+    button {
+      padding:12px 25px;
+      background: linear-gradient(45deg,#0072ff,#00c6ff);
+      color:white;
+      border:none;
+      border-radius:25px;
+      cursor:pointer;
+      font-size:16px;
+      font-weight:bold;
+      transition:0.3s;
+      margin-top:15px;
+    }
+    button:hover {
+      background: linear-gradient(45deg,#005ecb,#0099ff);
+      transform: scale(1.05);
+    }
+    footer {
+      background: rgba(0,0,0,0.7);
+      color:white;
+      text-align:center;
+      padding:12px;
+      margin-top:30px;
+      font-size:14px;
+    }
+    /* Animations */
+    @keyframes fadeInDown {
+      from {opacity:0; transform:translateY(-50px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(40px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes zoomIn {
+      from {opacity:0; transform:scale(0.9);}
+      to {opacity:1; transform:scale(1);}
+    }
+  </style>
 </head>
 <body>
-<h1>my site is working!</h>
+  <header>🌍 International Tour Operator Info Portal</header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offers.html">Offers</a>
+    <a href="blog.html">Blog</a>
+    <a href="destination.html">Destinations</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="review.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="register.html">Register</a>
+    <a href="terms.html">Terms</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Discover Your Next Adventure ✈️</h1>
+    <p>Find trusted international tour operators, compare services, and book unforgettable journeys with ease.</p>
+  </div>
+
+  <div class="home">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✅ Verified & trusted travel operators</li>
+      <li>✅ Explore global destinations</li>
+      <li>✅ Read genuine customer reviews</li>
+      <li>✅ Get exclusive offers & packages</li>
+    </ul>
+    <button onclick="alert('Search feature coming soon!')">🔍 Search Operators</button>
+  </div>
+
+  <footer>
+    &copy; 2025 International Tour Operator Info Portal. All rights reserved.
+  </footer>
 </body>
 </html>
