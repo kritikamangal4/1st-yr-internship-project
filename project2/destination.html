@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,70,0.7)), url('https://source.unsplash.com/1600x900/?world,travel') no-repeat center/cover;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    nav {
+      background: rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 12px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd00;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+      transition: 0.4s;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    footer {
+      background: #000428;
+      padding: 15px;
+      text-align: center;
+      margin-top: 30px;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>🌍 Top Destinations</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offers.html">Offers</a>
+    <a href="blog.html">Blog</a>
+    <a href="destination.html">Destinations</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="review.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="register.html">Register</a>
+    <a href="terms.html">Terms</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIXtjMb3ybeTYQoNVTcxI9uVZJXvPdZ_mVgQ&s" alt="India">
+      <h2>🇮🇳 India</h2>
+      <p>Taj Mahal, Kerala Backwaters, Himalayas</p>
+    </div>
+    <div class="card">
+      <img src="https://i0.wp.com/www.touristjapan.com/wp-content/uploads/2023/04/fujiyoshida-view-scaled-e1680427764989.jpg?resize=2000%2C800&ssl=1" alt="Japan">
+      <h2>🇯🇵 Japan</h2>
+      <p>Tokyo, Kyoto, Mount Fuji</p>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReYlUT_cZwAChH1dGPpMmW67GXl0qt4cnNoA&s" alt="Italy">
+      <h2>🇮🇹 Italy</h2>
+      <p>Rome, Venice, Florence</p>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR0l6jk7fvLncokjg8-laJsrMAwRDUyjPHiA&s" alt="Australia">
+      <h2>🇦🇺 Australia</h2>
+      <p>Sydney, Great Barrier Reef</p>
+    </div>
+  </div>
+
+  <footer>© 2025 Travel Portal | All Rights Reserved</footer>
+</body>
+</html>

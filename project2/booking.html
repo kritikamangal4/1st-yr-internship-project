@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Trip</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .booking-box {
+        width: 400px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 25px;
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        color: #fff;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        background: #0ea5e9;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #0284c7;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="booking-box">
+    <h2>Book Your Trip</h2>
+
+    <label>Selected Package</label>
+    <input type="text" id="packageName" readonly>
+
+    <label>Your Full Name</label>
+    <input type="text" placeholder="Enter your name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email">
+
+    <label>Phone</label>
+    <input type="text" placeholder="Enter your number">
+
+    <label>Travel Date</label>
+    <input type="date">
+
+    <label>No. of People</label>
+    <select>
+        <option>1 Person</option>
+        <option>2 People</option>
+        <option>3 People</option>
+        <option>4+ Group</option>
+    </select>
+
+    <button class="btn">Confirm Booking</button>
+</div>
+
+<script>
+    // Auto-fill package name from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const packageName = urlParams.get("package") || "No Package Selected";
+    document.getElementById("packageName").value = packageName;
+</script>
+
+</body>
+</html>
